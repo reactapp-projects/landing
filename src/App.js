@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div style={{ height: "20vh" }}>Header</div>
       <FeatureHighlights />
-      <div style={{ backgroundColor: "#736D6D", height: "0.1px" }}></div>
+      <div style={{ backgroundColor: "#736D6D", height: "1px" }}></div>
       <ComingSoon />
     </div>
   );
