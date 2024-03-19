@@ -17,6 +17,36 @@
   margin-bottom: 5%;
 }
 
+.hamburgermenu {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.hamburgermenu:hover {
+  background-color: transparent !important; /* Optional: override hover effect */
+}
+.navbarWrapper {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.linkList {
+  list-style-type: none;
+}
+
+.linkList li {
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  color: #0c0ce9;
+}
+
 .headersvg {
   width: 40px;
   height: 35px;

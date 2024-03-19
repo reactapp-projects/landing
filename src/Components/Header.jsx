@@ -3,10 +3,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import style from "./Header.module.css";
 import { logo_svg } from "./LogoSVG";
+import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <div className={style.body}>
+    <div id="welcome" className={style.body}>
       <div className={style.welcomeDeep}>
         <div className={style.welcomeHeader}>
           {/* <svg
@@ -19,6 +20,9 @@ function Header() {
           </svg> */}
           {logo_svg}
           <p className={style.headertext}>DeepLinks</p>
+          <div className={style.navbarWrapper}>
+            <Navbar />
+          </div>
         </div>
         <div className={style.headermain}>
           <div>
@@ -41,7 +45,7 @@ function Header() {
           </svg>
         </div>
       </div>
-      <div className={style.secondboxwelcom}>
+      <div id="HowItWorks" className={style.secondboxwelcom}>
         <p className={style.secondheadertext}>How It Works</p>
         <p className={style.secondmaintext}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

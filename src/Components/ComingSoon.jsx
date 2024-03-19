@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 const ComingSoon = () => {
   return (
-    <div className={style.body}>
+    <div id="ComingSoon" className={style.body}>
       <p className={style.first_text}>Coming Soon!</p>
       <p className={style.second_text}>Join the Waitlist</p>
       <div className={style.grid}>
