@@ -23,6 +23,15 @@
   margin: 0 auto;
   justify-content: center;
   justify-items: center;
+  margin-bottom: 10vh;
+}
+.secondGrid {
+  background: linear-gradient(to right, #0c0ce9, #222e99);
+  /* For older browsers */
+  background: -webkit-linear-gradient(left, #0c0ce9, #222e99);
+  background: -moz-linear-gradient(left, #0c0ce9, #222e99);
+  background: -o-linear-gradient(left, #0c0ce9, #222e99);
+  width: 90%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -58,6 +67,57 @@
     font-size: 16px;
     color: #606060;
     margin-bottom: 5vh;
+  }
+  .secondGrid {
+    display: grid;
+    margin: 0 auto;
+    border-radius: 25px;
+    grid-template-columns: 2fr 3fr;
+  }
+  .belowImage {
+    margin-left: 15vw;
+  }
+  .signup {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .form {
+    width: 60%;
+    display: grid;
+    grid-gap: 10px;
+  }
+  .input {
+    background-color: transparent;
+    border: 3px solid transparent;
+    border-bottom: 3px solid white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .input::placeholder {
+    color: white;
+  }
+  .input:focus {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .button {
+    background-color: #e8eaef;
+    color: #050505;
+    border-radius: 80px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    margin-top: 2vh;
   }
 }
 
@@ -95,6 +155,55 @@
     font-size: 14px;
     color: #606060;
     margin-bottom: 5vh;
+  }
+  .secondGrid {
+    display: grid;
+    margin: 0 auto;
+    border-radius: 25px;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .signup {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .form {
+    width: 90%;
+    display: grid;
+    grid-gap: 10px;
+  }
+  .input {
+    background-color: transparent;
+    border: 3px solid transparent;
+    border-bottom: 3px solid white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .input::placeholder {
+    color: white;
+  }
+  .input:focus {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .button {
+    background-color: #e8eaef;
+    color: #050505;
+    border-radius: 80px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    margin-top: 2vh;
   }
 }
 
@@ -134,5 +243,57 @@
     font-size: 14px;
     color: #606060;
     margin-bottom: 5vh;
+  }
+  .secondGrid {
+    /* display: grid; */
+    margin: 0 auto;
+    border-radius: 25px;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  .signup {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    /* margin: 0 auto; */
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .form {
+    width: 100%;
+    display: grid;
+    /* grid-gap: 10px; */
+  }
+  .input {
+    background-color: transparent;
+    border: 3px solid transparent;
+    border-bottom: 3px solid white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .input::placeholder {
+    color: white;
+  }
+  .input:focus {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .button {
+    background-color: #e8eaef;
+    color: #050505;
+    border-radius: 80px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    margin-top: 2vh;
   }
 }
