@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 const ComingSoon = () => {
   return (
-    <div className={style.body}>
+    <div id="ComingSoon" className={style.body}>
       <p className={style.first_text}>Coming Soon!</p>
       <p className={style.second_text}>Join the Waitlist</p>
       <div className={style.grid}>
@@ -408,14 +408,25 @@ const ComingSoon = () => {
         <div>
           <p className={style.signup}>Sign Up Now!</p>
           <Form className={style.form}>
-            <Form.Control className={style.input} size="lg" type="text" placeholder="Full Name" />
-            <Form.Control className={style.input} size="lg" type="text" placeholder="Email Address *" />
+            <Form.Control
+              className={style.input}
+              size="lg"
+              type="text"
+              placeholder="Full Name"
+            />
+            <Form.Control
+              className={style.input}
+              size="lg"
+              type="text"
+              placeholder="Email Address *"
+            />
             <Button variant="primary" type="submit" className={style.button}>
               Submit
             </Button>
           </Form>
         </div>
       </div>
+      <hr />
     </div>
   );
 };
