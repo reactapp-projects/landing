@@ -1,13 +1,12 @@
 import "./App.css";
-import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FeatureHighlights from "./Components/FeatureHighlights";
 
 function App() {
   return (
     <div className="App">
-      <div className="App-header">
-        <Button>react app</Button>
-      </div>
+      <div style={{ height: "20vh" }}>Header</div>
+      <FeatureHighlights />
     </div>
   );
 }
