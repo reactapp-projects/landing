@@ -426,7 +426,6 @@ const ComingSoon = () => {
           </Form>
         </div>
       </div>
-      <hr />
     </div>
   );
 };
