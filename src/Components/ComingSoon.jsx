@@ -1,9 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./ComingSoon.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from "axios";
 
 const ComingSoon = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    emailAddress: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("Full Name:", formData.fullName);
+    console.log("Email Address:", formData.emailAddress);
+    try {
+      const data = await fetch("http://13.48.131.120:8001/users/member/", {
+        method: "POST",
+        body: JSON.stringify({
+          full_name: "bfdbvdfb",
+          email: "matin1380day@gmail.com",
+        }),
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+    // try {
+    //   const { data } = await axios.post(
+    //     "http://13.48.131.120:8001/users/member/",
+    //     JSON.stringify({
+    //       full_name: "bfdbvdfb",
+    //       email: "matin1380day@gmail.com",
+    //     }),
+    //     {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //     }
+    //   );
+    //   console.log(data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
   return (
     <div id="ComingSoon" className={style.body}>
       <p className={style.first_text}>Coming Soon!</p>
@@ -407,18 +454,24 @@ const ComingSoon = () => {
 
         <div>
           <p className={style.signup}>Sign Up Now!</p>
-          <Form className={style.form}>
+          <Form className={style.form} onSubmit={handleSubmit}>
             <Form.Control
               className={style.input}
               size="lg"
               type="text"
+              name="fullName"
               placeholder="Full Name"
+              value={formData.fullName}
+              onChange={handleInputChange}
             />
             <Form.Control
               className={style.input}
               size="lg"
               type="text"
+              name="emailAddress"
               placeholder="Email Address *"
+              value={formData.emailAddress}
+              onChange={handleInputChange}
             />
             <Button variant="primary" type="submit" className={style.button}>
               Submit

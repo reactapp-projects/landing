@@ -3,7 +3,7 @@ import style from "./Connect.module.css";
 
 const Connect = () => {
   return (
-    <div className={style.body}>
+    <div id="Connect" className={style.body}>
       <p className={style.third_text}>Connect</p>
       <div className={style.grid}>
         <svg

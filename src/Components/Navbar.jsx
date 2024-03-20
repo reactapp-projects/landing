@@ -45,7 +45,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#FeaturesHighlights" className={style.link}>
+              <a href="#FeaturesHighlights" className={style.link} >
                 Features Highlights
               </a>
             </li>
