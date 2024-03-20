@@ -3,7 +3,7 @@ import style from "./AboutUs.module.css";
 
 const AboutUS = () => {
   return (
-    <div className={style.body}>
+    <div id="AboutUs" className={style.body}>
       <p className={style.first_text}>About Us</p>
       <div className={style.image}></div>
       <p className={style.second_text}>Our Story</p>
