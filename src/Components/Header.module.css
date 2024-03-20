@@ -26,16 +26,15 @@
 .hamburgermenu:hover {
   background-color: transparent !important; /* Optional: override hover effect */
 }
+.hamburgermenu::after {
+  display: none !important; /* Hide the default arrow icon */
+}
 .navbarWrapper {
   margin-left: auto;
   margin-right: 30px;
 }
 .linkList {
-  list-style-type: none;
-}
-
-.linkList li {
-  margin-bottom: 10px;
+  padding: 0;
 }
 
 .link {
@@ -168,6 +167,11 @@
     width: 20px;
     height: 15px;
     margin-top: 5px;
+  }
+
+  .linkList {
+    padding: 0;
+    font-size: 8px;
   }
 
   .headertext {
