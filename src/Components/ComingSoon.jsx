@@ -3,6 +3,7 @@ import style from "./ComingSoon.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const ComingSoon = () => {
   const [formData, setFormData] = useState({
@@ -22,34 +23,36 @@ const ComingSoon = () => {
     console.log("Full Name:", formData.fullName);
     console.log("Email Address:", formData.emailAddress);
     try {
-      const data = await fetch("http://13.48.131.120:8001/users/member/", {
-        method: "POST",
-        body: JSON.stringify({
-          full_name: "bfdbvdfb",
-          email: "matin1380day@gmail.com",
+      const { data } = await axios.post(
+        "http://13.48.131.120:8001/users/member/",
+        JSON.stringify({
+          full_name: formData.fullName,
+          email: formData.emailAddress,
         }),
-      });
-      console.log(data);
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (data) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `${data.full_name} Successfully signed up!`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     } catch (error) {
-      console.log(error);
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Failed to sign up.\nEmail has problem.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
-    // try {
-    //   const { data } = await axios.post(
-    //     "http://13.48.131.120:8001/users/member/",
-    //     JSON.stringify({
-    //       full_name: "bfdbvdfb",
-    //       email: "matin1380day@gmail.com",
-    //     }),
-    //     {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //     }
-    //   );
-    //   console.log(data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
   return (
     <div id="ComingSoon" className={style.body}>
