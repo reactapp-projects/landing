@@ -15,8 +15,13 @@ WORKDIR /app
 
 COPY . .
 RUN rm package-lock.json
-RUN yarn install --frozen-lockfile
-RUN yarn build
+# RUN yarn install --frozen-lockfile
+# RUN yarn build
+RUN npm i --package-lock-only
+
+RUN npm install
+
+RUN npm run build
 # Expose port 3000
 # EXPOSE 3000
 
