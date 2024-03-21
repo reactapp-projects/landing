@@ -1,16 +1,18 @@
-FROM node:14
+# Stage 1: Build the React app
+FROM node:14 as build
 
-WORKDIR /src
+WORKDIR /app
 
-# Install app dependencies
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
-
-# Copy your code into the Docker image
 COPY . .
+RUN npm run build
 
-# Expose the port 3000
-EXPOSE 3000
+# Stage 2: Serve the built React app using Nginx
+FROM nginx:alpine
 
-# Set the default command to run when a container starts
-CMD ["npm", "start"]
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
