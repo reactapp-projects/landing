@@ -14,10 +14,14 @@ WORKDIR /app
 # COPY . .
 
 COPY . .
-RUN rm package-lock.json
+
+RUN npm config set fetch-retry-mintimeout 20000
+RUN npm config set fetch-retry-maxtimeout 180000
+
+# RUN rm package-lock.json
 # RUN yarn install --frozen-lockfile
 # RUN yarn build
-RUN npm i --package-lock-only
+# RUN npm i --package-lock-only
 
 RUN npm install
 
