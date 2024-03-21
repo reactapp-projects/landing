@@ -8,21 +8,21 @@ WORKDIR /app
 COPY package*.json ./
 
 # # Install dependencies
-RUN npm install
+# RUN npm install
 
 # # Copy the entire project to the working directory
 # COPY . .
 
+
+RUN rm package-lock.json
+RUN yarn install --frozen-lockfile
 RUN npm ci --omit=dev
 COPY . .
-
-# RUN rm package-lock.json
-# RUN yarn install --frozen-lockfile
-# RUN yarn build
+RUN yarn build
 # RUN npm i --package-lock-only
 
 # RUN npm install
-RUN npm run build
+# RUN npm run build
 # Expose port 3000
 # EXPOSE 3000
 
