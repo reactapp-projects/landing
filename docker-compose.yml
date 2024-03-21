@@ -1,9 +1,12 @@
-version: "3.8"
+version: '3.4'
 
 services:
-  app:
-    container_name: app-prod
-    image: app-prod
-    build:
-      context: .
-      target: production
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src
+    working_dir: /src
+    environment:
+      - NODE_ENV=development
