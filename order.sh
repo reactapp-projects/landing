@@ -24,8 +24,8 @@ sudo nginx -t
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
 nvm list-remote
-nvm install v19.4.0
-nvm use v19.4.0
+nvm install v20.11.1
+nvm use v20.11.1
 node -v
 npm install 
 npm run build
